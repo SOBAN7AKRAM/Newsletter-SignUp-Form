@@ -69,11 +69,14 @@ body{
 #pic{
     flex: 1;
 }
-#pic img{
+#pic img:first-child{
     height: 100%;
     width: 100%;
     display: block;
     float: right;
+}
+#mobileImg{
+    display: none;
 }
 label{
     font-size: 0.7rem;
@@ -145,3 +148,74 @@ input[type="submit"]:hover{
 #dismissBtn{
     width: 100%;
 }
+
+
+ /* Mobile device design */
+ @media screen and (max-width: 700px) {
+    .container{
+        border-radius: 1.5rem;
+        height: 100%;
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        padding: 0;
+    }
+    #forum p{
+        font-size: 0.8rem;
+    }
+    #forum li{
+        font-size: 0.8rem;
+    }
+    #forum h1{
+        font-size: 2.5rem;
+    }
+    #forum{
+        flex: 2;
+        justify-content: flex-start;
+        padding: 2rem 2.3rem;
+        gap: 2rem;
+    }
+    #pic{
+        padding: 0;
+        flex: 1;
+    }
+    #pic img:first-child{
+        display: none;
+    }
+    #mobileImg{
+        display: block;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+    input[type="email"]{
+        width: 86%;
+    }
+    #errorMsg{
+        padding-right: 1.5rem;
+    }
+    body{
+        background-color: hsl(0, 0%, 100%);
+    }
+    .confirmationMessage{
+        height: 100%;
+        width: 100%;
+        
+    }
+    #dismissBtn{
+        margin-top: 8rem;
+        align-self: flex-end;
+    }
+    .confirmationMessage > img{
+        height: 4rem;
+        width: 4rem;
+        margin-bottom: 2rem;
+    }
+    .confirmationMessage p{
+        font-weight: normal;
+        font-size: 0.9rem;
+        padding: 1rem 0rem;
+        color: hsl(235, 18%, 26%);
+    }
+ }
